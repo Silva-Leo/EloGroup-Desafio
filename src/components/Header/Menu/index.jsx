@@ -35,7 +35,7 @@ const Li = styled.div`
     list-style-type: none;
     text-decoration: none;
     color: white;
-    font-size: 0.9rem;
+    font-size: 1.2em;
   }                             // add hover futuramente e detalhes
 `;
 
@@ -44,17 +44,17 @@ const Menu = () => (
     <NavMenu>
       <Li>
         <Link to="/">
-          Home
+          Registrar
         </Link>
       </Li>
       <Li>
-        <Link to="/contact">
-          Contact
+        <Link to="/Painel">
+          Painel
         </Link>
       </Li>
       <Li>
-        <Link to="/about">
-          About
+        <Link to="/NewLead">
+          Novo Lead
         </Link>
       </Li>
     </NavMenu>

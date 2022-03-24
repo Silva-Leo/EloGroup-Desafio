@@ -7,6 +7,6 @@ export const StyleHeader = styled.header`${({theme})=>css`
     align-items: center;
     justify-content: space-between;
     background-color: ${theme.colors.black};
-    height: 40px;
+    height: 10vh;
     width: 100%;
 `}`;
