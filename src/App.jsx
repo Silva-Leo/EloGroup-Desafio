@@ -5,7 +5,7 @@ import Theme from "../src/styles/theme";
 import Layout from "./components/Layuot/layout";
 import CreateLogin from './pages/CreateLogin';
 import Painel from './pages/Painel';
-import NewLead from './pages/NewLead';
+
 
 function App() {
   return (
@@ -15,7 +15,6 @@ function App() {
           <Routes>
             <Route path="/" element={<CreateLogin />} />
             <Route path="/Painel" element={<Painel />} />
-            <Route path="/NewLead" element={<NewLead />} />
           </Routes>
         </Layout>
       </Theme>
