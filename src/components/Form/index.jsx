@@ -47,8 +47,8 @@ function Form(){
     let schema = yup.object().shape({
      
         confirmPassword: yup.string("Erro: Necessário preencher o campo senha!")
-        .min(8,"Erro: A senha deve ter no mínimo 8 caracteres!").oneOf([yup.ref('password'), null], 'Passwords must match')
         .required("Erro: Necessário preencher o campo senha!")
+        .min(8,"Erro: A senha deve ter no mínimo 8 caracteres!").oneOf([yup.ref('password'), null], 'Por favor redigite sua senha')
         .matches(/^[0-9A-Za-z]*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?][0-9a-zA-Z]*$/,'Erro: Necessário pelo menos um caractere especial'),       
      
         password: yup.string("Erro: Necessário preencher o campo senha!")
