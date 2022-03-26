@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Tabela from '../assets/components/Tabela';
+import Lead from '../../controllers/AddLead-Table';
 
 export default function Painel(){
     return(
         <>
-            <Tabela/>
+            <Lead/>
         </>
     )
 }
