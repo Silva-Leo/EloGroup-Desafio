@@ -54,6 +54,11 @@ const Menu = () => (
           Painel
         </Link>
       </Li>
+      <Li>
+        <Link to="/Painel/NewLead">
+          NewLead
+        </Link>
+      </Li>
     </NavMenu>
   </Nav>
 );
