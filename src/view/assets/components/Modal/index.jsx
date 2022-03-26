@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 import { Button, Modal, Form, InputGroup, FormControl } from "react-bootstrap";
+import { ContainerModal } from "./style.modal";
 
 export default function ModalNewLead(props) {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const [lgShow, setLgShow] = useState(false);
 
   return (
     <>
@@ -24,7 +21,7 @@ export default function ModalNewLead(props) {
           <Modal.Title>EloGroup | Adicionar novo Lead </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div>
+          <ContainerModal>
             <Form onSubmit={props.save}>
               <Form.Group
                 className="mb-3"
@@ -66,75 +63,71 @@ export default function ModalNewLead(props) {
                 />
               </Form.Group>
             </Form>
-          </div>
-          <div>
-            Oportunidades
-            <table>
-              <tr>
-                <th>
-                  <input
-                    // id="AllCheckbox"
-                    onChange={props.all}
-                    type="checkbox"
-                  ></input>
-                </th>
-                <th>Selecionar tudo</th>
-              </tr>
-              <tr>
-                <th>
-                  <input
-                    // className="check"
-                    onChange={props.RPA}
-                    type="checkbox"
-                    value="RPA"
-                  ></input>
-                </th>
-                <th>RPA</th>
-              </tr>
-              <tr>
-                <th>
-                  <input
-                    // className="check"
-                    onChange={props.product}
-                    type="checkbox"
-                    value="Produto Digital"
-                  ></input>
-                </th>
-                <th>Produto Digital</th>
-              </tr>
-              <tr>
-                <th>
-                  <input
-                    // className="check"
-                    onChange={props.analitycs}
-                    type="checkbox"
-                    value="Analytics"
-                  ></input>
-                </th>
-                <th>Analytics</th>
-              </tr>
-              <tr>
-                <th>
-                  <input
-                    // className="check"
-                    onChange={props.BPM}
-                    type="checkbox"
-                    value="BPM"
-                  ></input>
-                </th>
-                <th>BPM</th>
-              </tr>
-            </table>
-          </div>
+            <div>
+              Oportunidades
+              <table>
+                <tr>
+                  <th>
+                    <input onChange={props.all} type="checkbox" id="AllCheckbox" ></input>
+                  </th>
+                  <th>Selecionar tudo</th>
+                </tr>
+                <tr>
+                  <th>
+                    <input
+                      onChange={props.RPA}
+                      type="checkbox"
+                      value="RPA"
+                      className="check"
+                    ></input>
+                  </th>
+                  <th>RPA</th>
+                </tr>
+                <tr>
+                  <th>
+                    <input
+                      onChange={props.product}
+                      type="checkbox"
+                      value="Produto Digital"
+                      className="check"
+                    ></input>
+                  </th>
+                  <th>Produto Digital</th>
+                </tr>
+                <tr>
+                  <th>
+                    <input
+                      onChange={props.analitycs}
+                      type="checkbox"
+                      value="Analytics"
+                      className="check"
+                    ></input>
+                  </th>
+                  <th>Analytics</th>
+                </tr>
+                <tr>
+                  <th>
+                    <input
+                      onChange={props.BPM}
+                      type="checkbox"
+                      value="BPM"
+                      className="check"
+                    ></input>
+                  </th>
+                  <th>BPM</th>
+                </tr>
+              </table>
+            </div>
+          </ContainerModal>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={() => setLgShow(false)}>
             Fechar
           </Button>
-          <Button variant="primary" type="submit" onClick={handleClose}>
+          <Button variant="primary" type="submit" onClick={handleClose}> {/*function vai mandar para LocalStorage} */}
+
             Adicionar Lead
           </Button>
-          {/*function vai mandar para LocalStorage} */}
         </Modal.Footer>
       </Modal>
     </>
