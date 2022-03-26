@@ -1,20 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import Modal from '../Modal/index'
-
-import styled from "styled-components";
-
-//* Local Storage
-
-// const [items, setItems] = useState([]);
-
-// useEffect(() => {
-//   localStorage.setItem('items', JSON.stringify(items));
-// }, [items]);
-
-
-
-//--------------------------------------------
 
 const Tabela = () => {
   const altura = 5;

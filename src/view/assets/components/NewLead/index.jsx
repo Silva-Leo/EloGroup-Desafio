@@ -2,21 +2,22 @@ import React, { useState, useEffect } from "react";
 
 import Main from "../Container";
 
-
 export default function NewLead(props) {
   return (
     <Main>
       <form onSubmit={props.save}>
         <h2> Novo Lead</h2>
         <div>
-          <p>Nome</p>
+          <label>Nome:</label>
           <input
             onChange={props.onChangeName}
             type="text"
             required="required"
             value={props.name}
           ></input>
-          <p>Telefone</p>
+          <br />
+          <br />
+          <label>Telefone:</label>
           <input
             onChange={props.onChangePhone}
             value={props.phone}
@@ -25,20 +26,24 @@ export default function NewLead(props) {
             pattern="[0-9]{2}[9][0-9]{4}[0-9]{4}"
             required="required"
           ></input>
-          <p>Email</p>
+          <br />
+          <br />
+          <label>Email:</label>
           <input
             onChange={props.onChangeMail}
             value={props.mail}
             type="email"
             required="required"
           ></input>
+          <br />
+          <br />
         </div>
         <div>
           <p>Oportunidades</p>
           <table>
             <tr>
               <th>
-               <input
+                <input
                   id="fistCheck"
                   onChange={props.all}
                   type="checkbox"
@@ -91,9 +96,7 @@ export default function NewLead(props) {
               <th>BPM</th>
             </tr>
           </table>
-          <button type="submit">
-            Salvar
-          </button>
+          <button type="submit">Salvar</button>
         </div>
       </form>
     </Main>
