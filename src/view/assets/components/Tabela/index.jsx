@@ -26,7 +26,7 @@ const Tabela = () => {
 
   return (
     <>
-    <Modal/>
+
       <div>
         <img />
         <h1>Painel de Leads</h1>
