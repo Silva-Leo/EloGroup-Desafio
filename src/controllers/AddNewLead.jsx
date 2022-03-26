@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import AddLead from "../views/AddLead"
-import {useHistory} from 'react-router-dom';
+import NewLead from "../view/assets/components/NewLead"
+import {useNavigate} from 'react-router-dom';
+
 function ConfigLeadAdd(){
-    const history = useHistory()
+    const history = useNavigate()
     const [name,setName] = useState("")
     const [phone, setPhone] = useState("")
     const [mail, setMail] = useState("")
@@ -27,9 +28,7 @@ function ConfigLeadAdd(){
         }
     },[])
 
-  
-
-    
+ 
     function allOrClear(){
         let checkbox = document.getElementsByClassName("check")
         let firstCheckbox = document.getElementById("fistCheck")
@@ -79,7 +78,7 @@ function ConfigLeadAdd(){
 
     return(
         <>
-        <AddLead 
+        <NewLead 
             onChangeMail= {event => {setMail(event.target.value)}} 
             onChangePhone= {event => {setPhone(event.target.value)}} 
             onChangeName= {event => {setName(event.target.value)}} name={name} phone ={phone} mail={mail}
