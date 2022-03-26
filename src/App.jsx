@@ -1,10 +1,10 @@
-import GlobalStyle from "./styles/global-style";
+import GlobalStyle from "../src/view/styles/global-style";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Theme from "../src/styles/theme";
+import Theme from "../src/view/styles/theme";
 
-import Layout from "./components/Layuot/layout";
-import CreateLogin from './pages/CreateLogin';
-import Painel from './pages/Painel';
+import Layout from "../src/view/assets/components/Layuot/layout";
+import CreateLogin from '../src/view/pages/CreateLogin';
+import Painel from '../src/view/pages/Painel';
 
 
 function App() {
