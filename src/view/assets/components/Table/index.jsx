@@ -1,10 +1,12 @@
+import '../Table/tableStyle.css'
+
 function Table(props){
   return (
-      <div>
-          <div>
-              <h2> Painel de Leads</h2>
-          </div>
-          <button onClick={props.handleAddLead} >Novo Lead (+)</button>
+      <div className='TabelaContainer'>
+          <section>
+              <h2 id="tituloLead"> Painel de Leads</h2>
+          </section>
+          <button id='buttonNewLead' onClick={props.handleAddLead} >Novo Lead (+)</button>
           <table>
               <tr>
                   <th>Cliente em Potencial</th>
