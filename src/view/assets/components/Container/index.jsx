@@ -8,15 +8,7 @@ const Main = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height:90vh;
-
- 
-/* @media (min-width: 1020px) {
-    max-width: 1000px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  } */
+  height:70vh;
 `;
 
 export default Main;

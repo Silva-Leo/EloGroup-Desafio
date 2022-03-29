@@ -10,9 +10,9 @@ const Nav = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: space-between;
-    background-color: ${theme.colors.black};
+    background-color: ${theme.colors.backgroundGray};
     width: 100%;
     color: ${theme.colors.white};
   `}
@@ -56,7 +56,7 @@ const Menu = () => (
       </Li>
       <Li>
         <Link to="/Painel/NewLead">
-          NewLead
+          Novo Lead
         </Link>
       </Li>
     </NavMenu>

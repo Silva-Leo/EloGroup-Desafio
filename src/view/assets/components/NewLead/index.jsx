@@ -2,14 +2,17 @@ import React from "react";
 
 import Main from "../Container";
 
+import '../NewLead/newLeadStyle.css';
+
 export default function NewLead(props) {
   return (
     <Main>
       <form onSubmit={props.save}>
-        <h2> Novo Lead</h2>
-        <div>
-          <label>Nome:</label>
+        <section>
+        <h2 id="tituloLead"> Novo Lead</h2>
+          <label>Nome</label>
           <input
+          className="inputNewLead"
             onChange={props.onChangeName}
             type="text"
             required="required"
@@ -17,8 +20,9 @@ export default function NewLead(props) {
           ></input>
           <br />
           <br />
-          <label>Telefone:</label>
+          <label>Telefone</label>
           <input
+          className="inputNewLead"
             onChange={props.onChangePhone}
             value={props.phone}
             type="tel"
@@ -28,8 +32,9 @@ export default function NewLead(props) {
           ></input>
           <br />
           <br />
-          <label>Email:</label>
+          <label>Email</label>
           <input
+          className="inputNewLead"
             onChange={props.onChangeMail}
             value={props.mail}
             type="email"
@@ -37,10 +42,10 @@ export default function NewLead(props) {
           ></input>
           <br />
           <br />
-        </div>
-        <div>
+        </section>
+        <div id="checkboxDiv">
           <p>Oportunidades</p>
-          <table>
+          <table className="tableNewLead">
             <tr>
               <th>
                 <input
@@ -49,7 +54,7 @@ export default function NewLead(props) {
                   type="checkbox"
                 ></input>
               </th>
-              <th></th>
+              <th>Selecionar todos</th>
             </tr>
             <tr>
               <th>
@@ -96,7 +101,7 @@ export default function NewLead(props) {
               <th>BPM</th>
             </tr>
           </table>
-          <button type="submit">Salvar</button>
+          <button id="buttonSave" type="submit">Salvar</button>
         </div>
       </form>
     </Main>

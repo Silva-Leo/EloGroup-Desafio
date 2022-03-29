@@ -16,7 +16,6 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@types/react": "^17.0.42",
     "@vitejs/plugin-react": "^1.0.7",
     "vite": "^2.8.0"
   }

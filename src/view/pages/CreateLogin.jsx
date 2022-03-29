@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react";
+import Form from "../../view/assets/components/Form";
 
-import Form from '../assets/components/Form';
-
-export default function CreateLogin(){
-    return(
-        <>
-        <Form/>
-        </>
-    )
+export default function CreateLogin() {
+  return (
+    <Form/>
+  );
 }
