@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import NewLead from "../view/assets/components/NewLead"
+
 import {useNavigate} from 'react-router-dom';
 
-function ConfigLeadAdd(){
+import NewLead from "../view/assets/components/NewLead"
+
+export default function ConfigLeadAdd(){
     const history = useNavigate()
     const [name,setName] = useState("")
     const [phone, setPhone] = useState("")
@@ -41,10 +43,9 @@ function ConfigLeadAdd(){
         else{
             for(let i = 0; i < checkbox.length; i++){
                     checkbox[i].checked = true
-                    oportunity.add(checkbox[i].value)
+                    oportunity.add(checkbox[i].value) //!*bug
             }    
         }
-        console.log(oportunity)
     }
 
     function saveDate(ev){
@@ -74,8 +75,6 @@ function ConfigLeadAdd(){
             alert("Lead já cadastrada")
         }
     }
-
-
     return(
         <>
         <NewLead 
@@ -91,6 +90,5 @@ function ConfigLeadAdd(){
         />
         </>
     )
-}
+};
 
-export default ConfigLeadAdd;

@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import {useNavigate} from 'react-router-dom';
+
 import Table from "../view/assets/components/Table";
-let contador = 0;
 
 function Lead(){
+    let contador = 0;
     const history = useNavigate()
 
     const [list,setList] = useState([["Org. Internacional","",""],["","Ind.Farm LTDA",""],["Musc. Sound Live Cmp","",""]])
@@ -80,20 +81,35 @@ function Lead(){
     }
     return(
         <Table
-            LogicView={list.map(element =>{
-                        contador++
-                        return(
-                            <tr className= {contador%2 ? 'white' : 'gray'}>
-                                <th className="repeat" onDragStart={drag} draggable="true">{element[0]}</th>
-                                <th className="repeat" onDragStart={drag} onDrop={drop} onDragOver={allowDrop}draggable="true">{element[1]}</th>
-                                <th className="repeat" onDrop={drop} onDragOver={allowDrop} draggable="true">{element[2]}</th>
-                            </tr>
-                            )      
-                        }
-                    )}
-
-            handleAddLead={handleAddLead}
-        />
+        LogicView={list.map((element) => {
+          contador++;
+          return (
+            <tr className={contador % 2 ? "white" : "gray"}>
+              <th className="repeat" onDragStart={drag} draggable="true">
+                {element[0]}
+              </th>
+              <th
+                className="repeat"
+                onDragStart={drag}
+                onDrop={drop}
+                onDragOver={allowDrop}
+                draggable="true"
+              >
+                {element[1]}
+              </th>
+              <th
+                className="repeat"
+                onDrop={drop}
+                onDragOver={allowDrop}
+                draggable="true"
+              >
+                {element[2]}
+              </th>
+            </tr>
+          );
+        })}
+        handleAddLead={handleAddLead}
+      />
     )
 }
 
