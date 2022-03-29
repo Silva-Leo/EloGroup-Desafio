@@ -4,7 +4,6 @@ import styled, { css } from "styled-components";
 
 import { Link } from "react-router-dom";
 
-import { Button, Modal } from 'react-bootstrap';
 
 const Nav = styled.div`
   ${({ theme }) => css`
