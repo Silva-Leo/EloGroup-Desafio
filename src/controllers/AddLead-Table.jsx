@@ -7,7 +7,7 @@ function Lead(){
     let contador = 0;
     const history = useNavigate()
 
-    const [list,setList] = useState([["Org. Internacional","",""],["","Ind.Farm LTDA",""],["Musc. Sound Live Cmp","",""]])
+    const [list,setList] = useState([["EloGroup","",""],["","Drogasil",""],["Lollapaloza","",""]])
     localStorage.setItem('lead',JSON.stringify(list))
     useEffect(() =>{
         let dados = localStorage.getItem('copiaLead');
@@ -16,7 +16,7 @@ function Lead(){
             setList(dados)
     },[])
     
-    const [terra,setTerra] = useState("")
+    const [informacao,setinformacao] = useState("")
     function True(element){
         if(element){
             return true
@@ -31,17 +31,17 @@ function Lead(){
       
       function drag(ev) {
         let valor = ev.target.innerText
-        setTerra(valor)
+        setinformacao(valor)
       }
       
       function drop(ev) {
         ev.preventDefault()
-        let babado = terra
+        let listaInformacao = informacao
         let dados = localStorage.getItem('lead');
         dados = JSON.parse(dados);
-        let carata = dados
+        let informacaoRecebida = dados
         function findArray(array){
-            let boolList = array.map(list => list.includes(babado))
+            let boolList = array.map(list => list.includes(listaInformacao))
             return boolList.findIndex(True)
             }
 
@@ -53,8 +53,8 @@ function Lead(){
                     return contador - 1
             }
         }
-        let listaChange = list[findArray(carata)]
-        let indexElementChange = findElement(babado,listaChange)
+        let listaChange = list[findArray(informacaoRecebida)]
+        let indexElementChange = findElement(listaInformacao,listaChange)
         let aux = listaChange[indexElementChange+1]
         
         if(indexElementChange !== 2){
@@ -62,11 +62,11 @@ function Lead(){
             listaChange[indexElementChange + 1] = listaChange[indexElementChange]
             listaChange[indexElementChange] = aux
 
-            let index = findArray(carata)
+            let index = findArray(informacaoRecebida)
             if(index > -1){
-                carata.splice(index,1)
+                informacaoRecebida.splice(index,1)
             }
-            let listaTotal = [listaChange].concat(carata)
+            let listaTotal = [listaChange].concat(informacaoRecebida)
             localStorage.setItem('copiaLead',JSON.stringify(listaTotal));
             setList(listaTotal)
             

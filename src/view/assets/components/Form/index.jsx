@@ -2,8 +2,6 @@ import React, {useState} from 'react'
 
 import './formStyle.css';
 
-
-
 import * as yup from 'yup';
 
 function Form() {
@@ -85,7 +83,6 @@ function Form() {
   return (
     
     <div>
-      {/* <img src={img} /> */}
 
       <form className='formulario' onSubmit={addUser}>
         <label>Nome: </label>

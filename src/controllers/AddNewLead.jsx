@@ -43,7 +43,7 @@ export default function ConfigLeadAdd(){
         else{
             for(let i = 0; i < checkbox.length; i++){
                     checkbox[i].checked = true
-                    oportunity.add(checkbox[i].value) //!*bug
+                    oportunity.add(checkbox[i].value) 
             }    
         }
     }
