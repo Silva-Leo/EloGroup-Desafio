@@ -87,5 +87,4 @@ tr{
     height: 3em;
     background-color: #f9f9f9 ;
   }
-  // Adicione quais mais regras desejar!
 `
