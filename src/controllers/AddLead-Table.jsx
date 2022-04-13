@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import Table from "../view/assets/components/Table";
 
@@ -7,7 +7,8 @@ function Lead(){
     let contador = 0;
     const history = useNavigate()
 
-    const [list,setList] = useState([["EloGroup","",""],["","Drogasil",""],["Lollapaloza","",""]])
+    const [list,setList] = useState([["EloGroup","",""],["Drogasil","",""],["Lollapaloza","",""]])
+    
     localStorage.setItem('lead',JSON.stringify(list))
     useEffect(() =>{
         let dados = localStorage.getItem('copiaLead');
@@ -37,8 +38,7 @@ function Lead(){
       function drop(ev) {
         ev.preventDefault()
         let listaInformacao = informacao
-        let dados = localStorage.getItem('lead');
-        dados = JSON.parse(dados);
+        let dados = localStorage.getItem('lead').JSON.parse(dados);
         let informacaoRecebida = dados
         function findArray(array){
             let boolList = array.map(list => list.includes(listaInformacao))
